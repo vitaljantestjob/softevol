@@ -25,9 +25,10 @@ header {
   }
   a {
     text-decoration: none;
-    &:hover {
-      border-bottom: 2px solid black;
-    }
+    color: inherit;
+  }
+  .mr-20 {
+    margin-right: 20px;
   }
   span {
     display: flex;
@@ -40,14 +41,14 @@ header {
       border-right: 2px solid black;
     }
     &.down-point {
+      cursor: pointer;
       &:after {
         content: "";
-        height: 11px;
-        width: 14px;
-        background-image: url(img/down.png);
-        background-repeat: no-repeat;
-        position: relative;
-        left: 4px;
+          height: 11px;
+          width: 14px;
+          margin-left: 5px;
+          background-image: url(img/down.png);
+          background-repeat: no-repeat;
       }
     }
     img {
@@ -59,6 +60,7 @@ header {
       }
       &.button {
         height: 29px;
+        cursor: pointer;
       }
       &.auth {
         height: 40px;
@@ -93,13 +95,13 @@ header {
       padding-right: 10px;
       padding-left: 0px;
     }
-    .left {
-      @media (max-width: $smartphone) {
-        :first-child {
-          margin-left: 5px;
-        }
+    .nav-item {
+      padding: 2px 0;
+      border-bottom: 2px solid transparent;
+      margin-left: 0;
+      &:hover {
+        border-bottom: 2px solid black;
       }
-  
     }
     div {
       display: inherit;
@@ -109,6 +111,13 @@ header {
           margin-left: 10px;
         }
       }
+      &.left {
+        @media (max-width: $smartphone) {
+          :first-child {
+            margin-left: 5px;
+          }
+        }
+      }
     }
   }
   .navbar-additional {
@@ -116,6 +125,5 @@ header {
     height: $navbar-height;
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
-    padding: 0 10px;
   }
 }
