@@ -8,11 +8,124 @@
 body {
   min-width: 320px;
   background-color: #edfdff;
+  font-family: sans-serif;
 }
 
 header {
   background-color: #fff;
   position: fixed;
-  height: 30px;
+  font-size: 16px;
+  width: 100%;
+}
+
+header .bold {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:hover {
+  border-bottom: 2px solid black;
+}
+
+header span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header span.right-border {
+  border-right: 2px solid black;
+}
+
+header span.down-point:after {
+  content: "";
+  height: 11px;
+  width: 14px;
+  background-image: url(img/down.png);
+  background-repeat: no-repeat;
+}
+
+header span img {
+  margin-left: 2px;
+}
+
+header span img.logo {
+  height: 25px;
+}
+
+header span img.button {
+  height: 25px;
+}
+
+header span img.auth {
+  height: 40px;
+}
+
+header .desktop {
+  display: inherit !important;
+}
+
+@media (max-width: 860px) {
+  header .desktop {
+    display: none !important;
+  }
+}
+
+header .smartphone {
+  display: none !important;
+}
+
+@media (max-width: 860px) {
+  header .smartphone {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+}
+
+header .no-tablet {
+  display: inherit !important;
+}
+
+@media (max-width: 925px) {
+  header .no-tablet {
+    display: none !important;
+  }
+}
+
+header .navbar-main {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .navbar-main * {
+  border: 1px solid red;
+}
+
+header .navbar-main div {
+  display: inherit;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .navbar-additional {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
 }
 /*# sourceMappingURL=styles.css.map */

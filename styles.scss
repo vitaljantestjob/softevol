@@ -1,3 +1,6 @@
+$smartphone: 860px;
+$tablet: 925px;
+$navbar-height: 50px;
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +9,84 @@
 body {
   min-width: 320px;
   background-color: #edfdff;
+  font-family: sans-serif;
 }
 header {
   background-color: #fff;
   position: fixed;
-  height: 30px;
+  font-size: 16px;
+  width: 100%;
+  .bold {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      border-bottom: 2px solid black;
+    }
+  }
+  span {
+    display: flex;
+    align-items: center;
+    &.right-border {
+      border-right: 2px solid black;
+    }
+    &.down-point {
+      &:after {
+        content: "";
+        height: 11px;
+        width: 14px;
+        background-image: url(img/down.png);
+        background-repeat: no-repeat;
+      }
+    }
+    img {
+      margin-left: 2px;
+      &.logo {
+        height: 25px;
+      }
+      &.button {
+        height: 25px;
+      }
+      &.auth {
+        height: 40px;
+      }
+    }
+  }
+  .desktop {
+    display: inherit!important;
+    @media (max-width: $smartphone) {
+      display: none!important;
+    }
+  }
+  .smartphone {
+    display: none!important;
+    @media (max-width: $smartphone) {
+      display: flex!important;
+    }
+  }
+  .no-tablet {
+    display: inherit!important;
+    @media (max-width: $tablet) {
+      display: none!important;
+    }
+  }
+  .navbar-main {
+    * {border: 1px solid red;}
+    width: 100%;
+    height: $navbar-height;
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: inherit;
+      align-items: center;
+    }
+  }
+  .navbar-additional {
+    width: 100%;
+    height: $navbar-height;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+  }
 }
