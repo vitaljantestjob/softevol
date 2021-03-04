@@ -14,11 +14,14 @@ body {
 header {
   background-color: #fff;
   position: fixed;
-  font-size: 16px;
+  font-size: 13px;
   width: 100%;
   .bold {
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.3em;
+    @media (max-width: $smartphone) {
+      font-size: 1.2em;
+    }
   }
   a {
     text-decoration: none;
@@ -29,6 +32,10 @@ header {
   span {
     display: flex;
     align-items: center;
+    margin-left: 20px;
+    @media (max-width: $smartphone) {
+      margin-left: 15px;
+    }
     &.right-border {
       border-right: 2px solid black;
     }
@@ -39,15 +46,19 @@ header {
         width: 14px;
         background-image: url(img/down.png);
         background-repeat: no-repeat;
+        position: relative;
+        left: 4px;
       }
     }
     img {
       margin-left: 2px;
       &.logo {
-        height: 25px;
+        height: 22px;
+        margin-left: 12px;
+        margin-right: 28px;
       }
       &.button {
-        height: 25px;
+        height: 29px;
       }
       &.auth {
         height: 40px;
@@ -73,14 +84,31 @@ header {
     }
   }
   .navbar-main {
-    * {border: 1px solid red;}
     width: 100%;
     height: $navbar-height;
     display: flex;
     justify-content: space-between;
+    padding-right: 20px;
+    @media (max-width: $smartphone) {
+      padding-right: 10px;
+      padding-left: 0px;
+    }
+    .left {
+      @media (max-width: $smartphone) {
+        :first-child {
+          margin-left: 5px;
+        }
+      }
+  
+    }
     div {
       display: inherit;
       align-items: center;
+      &.right {
+        span {
+          margin-left: 10px;
+        }
+      }
     }
   }
   .navbar-additional {
@@ -88,5 +116,6 @@ header {
     height: $navbar-height;
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
+    padding: 0 10px;
   }
 }

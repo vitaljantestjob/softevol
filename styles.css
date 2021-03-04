@@ -14,13 +14,19 @@ body {
 header {
   background-color: #fff;
   position: fixed;
-  font-size: 16px;
+  font-size: 13px;
   width: 100%;
 }
 
 header .bold {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.3em;
+}
+
+@media (max-width: 860px) {
+  header .bold {
+    font-size: 1.2em;
+  }
 }
 
 header a {
@@ -38,6 +44,13 @@ header span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 20px;
+}
+
+@media (max-width: 860px) {
+  header span {
+    margin-left: 15px;
+  }
 }
 
 header span.right-border {
@@ -50,6 +63,8 @@ header span.down-point:after {
   width: 14px;
   background-image: url(img/down.png);
   background-repeat: no-repeat;
+  position: relative;
+  left: 4px;
 }
 
 header span img {
@@ -57,11 +72,13 @@ header span img {
 }
 
 header span img.logo {
-  height: 25px;
+  height: 22px;
+  margin-left: 12px;
+  margin-right: 28px;
 }
 
 header span img.button {
-  height: 25px;
+  height: 29px;
 }
 
 header span img.auth {
@@ -109,10 +126,20 @@ header .navbar-main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-right: 20px;
 }
 
-header .navbar-main * {
-  border: 1px solid red;
+@media (max-width: 860px) {
+  header .navbar-main {
+    padding-right: 10px;
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 860px) {
+  header .navbar-main .left :first-child {
+    margin-left: 5px;
+  }
 }
 
 header .navbar-main div {
@@ -122,10 +149,15 @@ header .navbar-main div {
           align-items: center;
 }
 
+header .navbar-main div.right span {
+  margin-left: 10px;
+}
+
 header .navbar-additional {
   width: 100%;
   height: 50px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
+  padding: 0 10px;
 }
 /*# sourceMappingURL=styles.css.map */
