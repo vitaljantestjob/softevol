@@ -1,16 +1,194 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="cache-control" content="no-cache">
-<meta name="description" content="">
-<meta name="author" content="Vitalii Kolomiiets, Kyiv, Ukraine, vitaljan@gmail.com">
-<title></title>
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="description" content="">
+  <meta name="author" content="Vitalii Kolomiiets, Kyiv, Ukraine, vitaljan@gmail.com">
+  <title></title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+
+    body {
+      min-width: 320px;
+      background-color: #edfdff;
+      font-family: sans-serif;
+    }
+
+    header {
+      background-color: #fff;
+      position: fixed;
+      font-size: 13px;
+      width: 100%;
+    }
+
+    header .bold {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+
+    @media (max-width: 860px) {
+      header .bold {
+        font-size: 1.2em;
+      }
+    }
+
+    header a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header .mr-20 {
+      margin-right: 20px;
+    }
+
+    header span {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-left: 20px;
+    }
+
+    @media (max-width: 860px) {
+      header span {
+        margin-left: 15px;
+      }
+    }
+
+    header span.right-border {
+      border-right: 2px solid black;
+    }
+
+    header span.down-point {
+      cursor: pointer;
+    }
+
+    header span.down-point:after {
+      content: "";
+      height: 11px;
+      width: 14px;
+      margin-left: 5px;
+      background-image: url(img/down.png);
+      background-repeat: no-repeat;
+    }
+
+    header span img {
+      margin-left: 2px;
+    }
+
+    header span img.logo {
+      height: 22px;
+      margin-left: 12px;
+      margin-right: 28px;
+    }
+
+    header span img.button {
+      height: 29px;
+      cursor: pointer;
+    }
+
+    header span img.auth {
+      height: 40px;
+    }
+
+    header .desktop {
+      display: inherit !important;
+    }
+
+    @media (max-width: 860px) {
+      header .desktop {
+        display: none !important;
+      }
+    }
+
+    header .smartphone {
+      display: none !important;
+    }
+
+    @media (max-width: 860px) {
+      header .smartphone {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+      }
+    }
+
+    header .no-tablet {
+      display: inherit !important;
+    }
+
+    @media (max-width: 925px) {
+      header .no-tablet {
+        display: none !important;
+      }
+    }
+
+    header .navbar-main {
+      width: 100%;
+      height: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-right: 20px;
+    }
+
+    @media (max-width: 860px) {
+      header .navbar-main {
+        padding-right: 10px;
+        padding-left: 0px;
+      }
+    }
+
+    header .navbar-main .nav-item {
+      padding: 2px 0;
+      border-bottom: 2px solid transparent;
+      margin-left: 0;
+    }
+
+    header .navbar-main .nav-item:hover {
+      border-bottom: 2px solid black;
+    }
+
+    header .navbar-main div {
+      display: inherit;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    header .navbar-main div.right span {
+      margin-left: 10px;
+    }
+
+    @media (max-width: 860px) {
+      header .navbar-main div.left :first-child {
+        margin-left: 5px;
+      }
+    }
+
+    header .navbar-additional {
+      width: 100%;
+      height: 50px;
+      border-top: 1px solid #e6e6e6;
+      border-bottom: 1px solid #e6e6e6;
+    }
+  </style>
+</head>
 <body>
   <header>
     <div class="navbar-main">
